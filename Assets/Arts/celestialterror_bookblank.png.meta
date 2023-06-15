@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: 0d8524a591ba09e4ebaf10c0fb8173bb
+<<<<<<<< HEAD:Assets/Arts/celestialterror_bookblank.png.meta
+guid: 1514e62d34e8aa54ab089aa63f88764e
+========
+guid: 2d91bfcdcee19924da9a08fbeb6eb0a0
+>>>>>>>> DevSS:Assets/Arts/DoorInnerM.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}

@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: cc6e2d8813b0d2449b0b63c2d74a4bd2
+<<<<<<<< HEAD:Assets/Arts/WrenchSquare.png.meta
+guid: 3c2a3eb466cea734f8dbbc9fc84eae2d
+========
+guid: 4918ad1874fb0e84ea63c47db4108d7c
+>>>>>>>> DevSS:Assets/Arts/DoorInnerL.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
