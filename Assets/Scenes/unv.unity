@@ -2297,7 +2297,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Dock: {fileID: 277667487}
   Observe: {fileID: 948739107}
-  Medbay: {fileID: 2012917623}
+  Hallway: {fileID: 0}
   Hydroponics: {fileID: 1357301324}
   Innercore: {fileID: 1840309924}
 --- !u!1 &1963790068
