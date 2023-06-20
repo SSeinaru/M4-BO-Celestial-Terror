@@ -5,11 +5,11 @@ using UnityEngine;
 public class pipeline : MonoBehaviour
 {
     float[] rotations = { 0, 90, 180, 270 };
-    public float[] correctRotation;
+    public float correctRotation;
     [SerializeField]
     bool isplaced = false;
 
-    int possiblerotion = 1;
+    float possiblerotion = 1;
     PipeManager pipeManager;
     private void Awake()
     {
@@ -17,21 +17,21 @@ public class pipeline : MonoBehaviour
     }
     private void Start()
     {
-        possiblerotion = correctRotation.Length;
+        possiblerotion = correctRotation;
         int rand = Random.Range(0, rotations.Length);
         transform.eulerAngles = new Vector3(0, 0, rotations[rand]);
         transform.Rotate(new Vector3(0, 0, 90));
 
         if(possiblerotion > 1)
         {
-            if (transform.eulerAngles.z == correctRotation[0] || transform.eulerAngles.z == correctRotation[1])
+            if (transform.eulerAngles.z == correctRotation || transform.eulerAngles.z == correctRotation)
             {
                 isplaced = true;
                 pipeManager.correctMove();
             }
             else
             {
-                if (transform.eulerAngles.z == correctRotation[0])
+                if (transform.eulerAngles.z == correctRotation)
                 {
                     isplaced = true;
                     pipeManager.correctMove();
@@ -47,7 +47,7 @@ public class pipeline : MonoBehaviour
         if (possiblerotion > 1)
         {
             transform.Rotate(new Vector3(0, 0, 90));
-            if (transform.eulerAngles.z == correctRotation[0] || transform.eulerAngles.z == correctRotation[1] && isplaced == false)
+            if (transform.eulerAngles.z == correctRotation || transform.eulerAngles.z == correctRotation && isplaced == false)
             {
                 isplaced = true;
                 pipeManager.correctMove();
@@ -61,7 +61,7 @@ public class pipeline : MonoBehaviour
             else
             {
                 transform.Rotate(new Vector3(0, 0, 90));
-                if (transform.eulerAngles.z == correctRotation[0] && isplaced == false)
+                if (transform.eulerAngles.z == correctRotation && isplaced == false)
                 {
                     isplaced = true;
                     pipeManager.correctMove();
