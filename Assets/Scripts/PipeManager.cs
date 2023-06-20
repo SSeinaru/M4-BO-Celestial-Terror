@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class KARENMATINCALL : MonoBehaviour
+public class PipeManager : MonoBehaviour
 {
     public GameObject pipesHolder;
     public GameObject[] pipes;
