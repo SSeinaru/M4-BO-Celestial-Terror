@@ -17,25 +17,22 @@ public class pipeline : MonoBehaviour
     }
     private void Start()
     {
-        possiblerotion = correctRotation;
+        //possiblerotion = correctRotation;
         int rand = Random.Range(0, rotations.Length);
         transform.eulerAngles = new Vector3(0, 0, rotations[rand]);
         transform.Rotate(new Vector3(0, 0, 90));
 
-        if(possiblerotion > 1)
+        if(possiblerotion >= 1)
         {
-            if (transform.eulerAngles.z == correctRotation || transform.eulerAngles.z == correctRotation)
+            if (transform.eulerAngles.z == correctRotation)
             {
                 isplaced = true;
                 pipeManager.correctMove();
             }
             else
             {
-                if (transform.eulerAngles.z == correctRotation)
-                {
-                    isplaced = true;
-                    pipeManager.correctMove();
-                }
+                isplaced = false;
+                pipeManager.wrongMove();
             }
 
         }
@@ -44,10 +41,11 @@ public class pipeline : MonoBehaviour
     }
     public void OnMouseDown()
     {
-        if (possiblerotion > 1)
+        if (possiblerotion >= 1)
         {
+            
             transform.Rotate(new Vector3(0, 0, 90));
-            if (transform.eulerAngles.z == correctRotation || transform.eulerAngles.z == correctRotation && isplaced == false)
+            if (transform.eulerAngles.z == correctRotation && isplaced == false)
             {
                 isplaced = true;
                 pipeManager.correctMove();
@@ -60,18 +58,7 @@ public class pipeline : MonoBehaviour
             }
             else
             {
-                transform.Rotate(new Vector3(0, 0, 90));
-                if (transform.eulerAngles.z == correctRotation && isplaced == false)
-                {
-                    isplaced = true;
-                    pipeManager.correctMove();
-                }
-                else if (isplaced == true)
-                {
-                    isplaced = false;
-                    pipeManager.wrongMove();
-
-                }
+                
             }
         }
     }

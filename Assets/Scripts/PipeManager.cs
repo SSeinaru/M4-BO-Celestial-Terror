@@ -28,8 +28,8 @@ public class PipeManager : MonoBehaviour
    public void correctMove()
     {
         correctpipes+= 1;
+        Debug.Log("correct move: " + correctpipes);
         if (correctpipes == totalPipes)
-            Debug.Log("correct move");
         {
             Debug.Log("you win");
         }
