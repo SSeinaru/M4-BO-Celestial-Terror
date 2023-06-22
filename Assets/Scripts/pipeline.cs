@@ -1,4 +1,4 @@
-  using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,41 +13,39 @@ public class pipeline : MonoBehaviour
     PipeManager pipeManager;
     private void Awake()
     {
-            pipeManager = GameObject.Find("PipeManager").GetComponent<PipeManager>();
+        pipeManager = GameObject.Find("PipeManager").GetComponent<PipeManager>();
     }
     private void Start()
     {
-        possiblerotion = correctRotation;
+        //possiblerotion = correctRotation;
         int rand = Random.Range(0, rotations.Length);
         transform.eulerAngles = new Vector3(0, 0, rotations[rand]);
         transform.Rotate(new Vector3(0, 0, 90));
 
-        if(possiblerotion > 1)
+        if (possiblerotion >= 1)
         {
-            if (transform.eulerAngles.z == correctRotation || transform.eulerAngles.z == correctRotation)
+            if (transform.eulerAngles.z == correctRotation)
             {
                 isplaced = true;
                 pipeManager.correctMove();
             }
             else
             {
-                if (transform.eulerAngles.z == correctRotation)
-                {
-                    isplaced = true;
-                    pipeManager.correctMove();
-                }
+                isplaced = false;
+                pipeManager.wrongMove();
             }
 
         }
-       
-        
+
+
     }
     public void OnMouseDown()
     {
-        if (possiblerotion > 1)
+        if (possiblerotion >= 1)
         {
+
             transform.Rotate(new Vector3(0, 0, 90));
-            if (transform.eulerAngles.z == correctRotation || transform.eulerAngles.z == correctRotation && isplaced == false)
+            if (transform.eulerAngles.z == correctRotation && isplaced == false)
             {
                 isplaced = true;
                 pipeManager.correctMove();
@@ -60,18 +58,7 @@ public class pipeline : MonoBehaviour
             }
             else
             {
-                transform.Rotate(new Vector3(0, 0, 90));
-                if (transform.eulerAngles.z == correctRotation && isplaced == false)
-                {
-                    isplaced = true;
-                    pipeManager.correctMove();
-                }
-                else if (isplaced == true)
-                {
-                    isplaced = false;
-                    pipeManager.wrongMove();
 
-                }
             }
         }
     }
