@@ -11,6 +11,8 @@ public class Inneco : MonoBehaviour
     public GameObject Hydroponics;
     public GameObject Innercore;
 
+    public AudioSource FootSteps;
+
     public void DockActive()
     {
         Innercore.SetActive(false);

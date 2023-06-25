@@ -8,6 +8,8 @@ public class Halway : MonoBehaviour
     public GameObject innercore;
     public GameObject airlock;
     public GameObject medbay;
+
+    public AudioSource FootSteps;
     // Start is called before the first frame update
     public void returnInner()
     {

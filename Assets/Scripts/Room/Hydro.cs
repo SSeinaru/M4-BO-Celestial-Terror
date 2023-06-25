@@ -8,8 +8,10 @@ public class Hydro : MonoBehaviour
     public GameObject innerCore;
     public GameObject hydroPonics;
     public GameObject puzzle1;
+
+    public AudioSource FootSteps;
     // Start is called before the first frame update
-    
+
     public void onArrowPress()
     {
         hydroPonics.SetActive(false);

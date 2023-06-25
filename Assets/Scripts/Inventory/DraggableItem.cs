@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 
 public class DraggableItem : MonoBehaviour,IBeginDragHandler,IDragHandler, IEndDragHandler
 {
+    public AudioSource Wrench;
     public Image image;
     [HideInInspector]public Transform parentAfterDrag;
     
@@ -29,6 +30,7 @@ public class DraggableItem : MonoBehaviour,IBeginDragHandler,IDragHandler, IEndD
         Debug.Log("not dragging");
         transform.SetParent(parentAfterDrag);
         image.raycastTarget = true;
+        Wrench.Play();
     }
 
  
