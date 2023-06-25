@@ -55,11 +55,10 @@ public class pipeline : MonoBehaviour
                 isplaced = false;
                 pipeManager.wrongMove();
 
+
             }
-            else
-            {
-                
-            }
+
         }
+   
     }
 }

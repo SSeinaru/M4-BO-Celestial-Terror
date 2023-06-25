@@ -6,6 +6,7 @@ public class PipeManager : MonoBehaviour
 {
     public GameObject pipesHolder;
     public GameObject[] pipes;
+    public GameObject incorrectpipe;
 
     [SerializeField]
     int totalPipes = 0;
@@ -26,17 +27,18 @@ public class PipeManager : MonoBehaviour
     }
 
    public void correctMove()
-    {
+   {
         correctpipes+= 1;
-        Debug.Log("correct move: " + correctpipes);
+        Debug.Log("correct move");
         if (correctpipes == totalPipes)
         {
             Debug.Log("you win");
         }
-    }
+   }
+
     public void wrongMove()
     {
-        correctpipes-= 1;
+        correctpipes -= 1;
 
     }
 
