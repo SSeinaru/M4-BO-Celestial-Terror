@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,7 @@ public class PipeManager : MonoBehaviour
     public GameObject pipesHolder;
     public GameObject[] pipes;
     public GameObject incorrectpipe;
+    public GameObject Timer;
 
     [SerializeField]
     int totalPipes = 0;
@@ -28,8 +30,9 @@ public class PipeManager : MonoBehaviour
 
    public void correctMove()
    {
-        correctpipes+= 1;
+        correctpipes += 1;
         Debug.Log("correct move");
+        Debug.Log(correctpipes + " T "+ totalPipes);
         if (correctpipes == totalPipes)
         {
             Debug.Log("you win");
@@ -39,8 +42,27 @@ public class PipeManager : MonoBehaviour
     public void wrongMove()
     {
         correctpipes -= 1;
+        Debug.Log(correctpipes);
 
     }
 
+    internal void CheckSolution()
+    {
+
+        pipeline[] pips = GetComponentsInChildren<pipeline>();
+        bool check = true;
+        foreach (pipeline pip in pips)
+        {
+            Debug.Log(pip.IsCorrect() + " " + pip.name +  " "+pip.correctRotation + " "+ pip.transform.eulerAngles.z);
+            if (pip.IsCorrect() ==false)
+            {
+                check = false;
+            }
+        }
+        if (check)
+        {
+            Timer.SetActive(false);
+        }
+    }
 }
 

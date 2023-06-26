@@ -20,20 +20,25 @@ public class pipeline : MonoBehaviour
         //possiblerotion = correctRotation;
         int rand = Random.Range(0, rotations.Length);
         transform.eulerAngles = new Vector3(0, 0, rotations[rand]);
-        transform.Rotate(new Vector3(0, 0, 90));
-
+        //transform.Rotate(new Vector3(0, 0, 90));
+        Debug.Log(correctRotation + " " + name);
         if(possiblerotion >= 1)
         {
-            if (transform.eulerAngles.z == correctRotation)
-            {
-                isplaced = true;
-                pipeManager.correctMove();
-            }
-            else
-            {
-                isplaced = false;
-                pipeManager.wrongMove();
-            }
+            isplaced = (int)transform.eulerAngles.z == (int)correctRotation;
+            // if (transform.eulerAngles.z == correctRotation)
+            // {
+            //    // Debug.Log("correct " + transform.position + " " + transform.eulerAngles.z + " " + correctRotation);
+            //
+            //     isplaced = true;
+            //     //pipeManager.correctMove();
+            // }
+            // else
+            // {
+            //    // Debug.Log("fout " + transform.position + " " + transform.eulerAngles.z + " " + correctRotation);
+            //
+            //     isplaced = false;
+            //     //pipeManager.wrongMove();
+            // }
 
         }
        
@@ -45,20 +50,32 @@ public class pipeline : MonoBehaviour
         {
             
             transform.Rotate(new Vector3(0, 0, 90));
-            if (transform.eulerAngles.z == correctRotation && isplaced == false)
-            {
-                isplaced = true;
-                pipeManager.correctMove();
-            }
-            else if (isplaced == true)
-            {
-                isplaced = false;
-                pipeManager.wrongMove();
 
-
-            }
+            Debug.Log(correctRotation + " " + name);
+            isplaced = (int)transform.eulerAngles.z == (int)correctRotation;
+          // if (transform.eulerAngles.z == correctRotation && isplaced == false)
+          // {
+          //     isplaced = transform.eulerAngles.z == correctRotation;
+          //    // Debug.Log("correct "+transform.position + " " + transform.eulerAngles.z + " " + correctRotation);
+          //    // pipeManager.correctMove();
+          // }
+          // else if (isplaced == true)
+          // {
+          //     Debug.Log("fout " + transform.position + " " + transform.eulerAngles.z + " " + correctRotation);
+          //
+          //     isplaced = false;
+          //    // pipeManager.wrongMove();
+          //
+          //
+          // }
+            pipeManager.CheckSolution();
 
         }
    
+    }
+
+    internal bool IsCorrect()
+    {
+        return isplaced;
     }
 }
