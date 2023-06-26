@@ -2514,6 +2514,7 @@ GameObject:
   - component: {fileID: 316925561}
   - component: {fileID: 316925560}
   - component: {fileID: 316925559}
+  - component: {fileID: 316925562}
   m_Layer: 5
   m_Name: Machine
   m_TagString: Untagged
@@ -2584,7 +2585,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 316925560}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 316925562}
+        m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
+        m_MethodName: TriggerDialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &316925560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2623,6 +2636,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 316925557}
   m_CullTransparentMesh: 1
+--- !u!114 &316925562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 316925557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3b95647fda38ca408676b899ecba182, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Ilya
+    sentences:
+    - Eugh. Complex machinery
+    - Better to remember its here
+    - Might need it later
 --- !u!1 &337673203
 GameObject:
   m_ObjectHideFlags: 0
@@ -3057,6 +3088,7 @@ GameObject:
   - component: {fileID: 383604494}
   - component: {fileID: 383604493}
   - component: {fileID: 383604492}
+  - component: {fileID: 383604495}
   m_Layer: 5
   m_Name: DoorR
   m_TagString: Untagged
@@ -3127,7 +3159,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 383604493}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 383604495}
+        m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
+        m_MethodName: TriggerDialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &383604493
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3166,6 +3210,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 383604490}
   m_CullTransparentMesh: 1
+--- !u!114 &383604495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 383604490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3b95647fda38ca408676b899ecba182, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Ilya
+    sentences:
+    - Hey what the hell
+    - Whats with the window
+    - What is IN THE WINDOW
+    - Better not to fret over it now
+    - Too many things aren't right here
 --- !u!1 &390514664
 GameObject:
   m_ObjectHideFlags: 0
@@ -3420,6 +3484,7 @@ GameObject:
   - component: {fileID: 471547298}
   - component: {fileID: 471547297}
   - component: {fileID: 471547296}
+  - component: {fileID: 471547299}
   m_Layer: 5
   m_Name: ElectricalInteractible
   m_TagString: Untagged
@@ -3490,7 +3555,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 471547297}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 471547299}
+        m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
+        m_MethodName: TriggerDialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &471547297
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3529,6 +3606,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 471547294}
   m_CullTransparentMesh: 1
+--- !u!114 &471547299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 471547294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3b95647fda38ca408676b899ecba182, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Ilya
+    sentences:
+    - A electrical box interesting placement
+    - Ehhh it works here nothing to fret about
+    - Its just a hallway nothing too interesting in here
 --- !u!1 &509162716
 GameObject:
   m_ObjectHideFlags: 0
@@ -4404,6 +4499,7 @@ GameObject:
   - component: {fileID: 612194106}
   - component: {fileID: 612194105}
   - component: {fileID: 612194104}
+  - component: {fileID: 612194107}
   m_Layer: 5
   m_Name: Grass
   m_TagString: Untagged
@@ -4474,7 +4570,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 612194105}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 612194107}
+        m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
+        m_MethodName: TriggerDialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &612194105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4513,6 +4621,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 612194102}
   m_CullTransparentMesh: 1
+--- !u!114 &612194107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 612194102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3b95647fda38ca408676b899ecba182, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Ilya
+    sentences:
+    - So this is the reason im breathing here
+    - Interesting
+    - Heh ironic when everything goes wrong
+    - Plants will never care
 --- !u!1 &619945940
 GameObject:
   m_ObjectHideFlags: 0
@@ -4814,6 +4941,7 @@ GameObject:
   - component: {fileID: 668796842}
   - component: {fileID: 668796841}
   - component: {fileID: 668796840}
+  - component: {fileID: 668796844}
   m_Layer: 5
   m_Name: Electrical
   m_TagString: Untagged
@@ -4884,7 +5012,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 668796841}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 668796844}
+        m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
+        m_MethodName: TriggerDialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &668796841
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4923,6 +5063,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 668796838}
   m_CullTransparentMesh: 1
+--- !u!114 &668796844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 668796838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3b95647fda38ca408676b899ecba182, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Ilya
+    sentences:
+    - Better not try and touch it
+    - But except its being electrical
+    - Again nothing too interesting
 --- !u!1 &674358934
 GameObject:
   m_ObjectHideFlags: 0
@@ -6310,6 +6468,7 @@ GameObject:
   - component: {fileID: 1033578595}
   - component: {fileID: 1033578594}
   - component: {fileID: 1033578593}
+  - component: {fileID: 1033578596}
   m_Layer: 5
   m_Name: Screen
   m_TagString: Untagged
@@ -6380,7 +6539,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1033578594}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1033578596}
+        m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
+        m_MethodName: TriggerDialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1033578594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6419,6 +6590,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1033578591}
   m_CullTransparentMesh: 1
+--- !u!114 &1033578596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1033578591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3b95647fda38ca408676b899ecba182, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Ilya
+    sentences:
+    - it shows the status of Earth
+    - Nothing too interresting
 --- !u!1001 &1125266440
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7757,6 +7945,7 @@ GameObject:
   - component: {fileID: 1640987118}
   - component: {fileID: 1640987117}
   - component: {fileID: 1640987116}
+  - component: {fileID: 1640987119}
   m_Layer: 5
   m_Name: Computer
   m_TagString: Untagged
@@ -7827,7 +8016,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1640987117}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1640987119}
+        m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
+        m_MethodName: TriggerDialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1640987117
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7866,6 +8067,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1640987114}
   m_CullTransparentMesh: 1
+--- !u!114 &1640987119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1640987114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3b95647fda38ca408676b899ecba182, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Ilya
+    sentences:
+    - Hmmm
+    - At computer still on in this catastrophe
+    - Heh even in hell situations everything goes wrong
+    - These shits stay on
+    - Its portraying lines of code
+    - Nothing too interesting in there
 --- !u!1 &1713960900
 GameObject:
   m_ObjectHideFlags: 0
@@ -7954,6 +8176,7 @@ GameObject:
   - component: {fileID: 1718782804}
   - component: {fileID: 1718782803}
   - component: {fileID: 1718782802}
+  - component: {fileID: 1718782805}
   m_Layer: 5
   m_Name: Gastank
   m_TagString: Untagged
@@ -8024,7 +8247,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1718782803}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1718782805}
+        m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
+        m_MethodName: TriggerDialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1718782803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8063,6 +8298,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1718782800}
   m_CullTransparentMesh: 1
+--- !u!114 &1718782805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1718782800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3b95647fda38ca408676b899ecba182, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Ilya
+    sentences:
+    - Just an ordinary Gastank
+    - Nothing too weird
 --- !u!1 &1730528071
 GameObject:
   m_ObjectHideFlags: 0
@@ -8075,6 +8327,7 @@ GameObject:
   - component: {fileID: 1730528075}
   - component: {fileID: 1730528074}
   - component: {fileID: 1730528073}
+  - component: {fileID: 1730528076}
   m_Layer: 5
   m_Name: DoorL
   m_TagString: Untagged
@@ -8145,7 +8398,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1730528074}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1730528076}
+        m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
+        m_MethodName: TriggerDialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1730528074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8184,6 +8449,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1730528071}
   m_CullTransparentMesh: 1
+--- !u!114 &1730528076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1730528071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3b95647fda38ca408676b899ecba182, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Ilya
+    sentences:
+    - Hey what the hell
+    - Whats with the window
+    - What is IN THE WINDOW
+    - Better not to fret over it now
+    - Too many things aren't right here
 --- !u!1 &1779978702
 GameObject:
   m_ObjectHideFlags: 0
@@ -8633,6 +8918,7 @@ GameObject:
   - component: {fileID: 1791419337}
   - component: {fileID: 1791419336}
   - component: {fileID: 1791419335}
+  - component: {fileID: 1791419338}
   m_Layer: 5
   m_Name: Grass2
   m_TagString: Untagged
@@ -8703,7 +8989,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1791419336}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1791419338}
+        m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
+        m_MethodName: TriggerDialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1791419336
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8742,6 +9040,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1791419333}
   m_CullTransparentMesh: 1
+--- !u!114 &1791419338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1791419333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3b95647fda38ca408676b899ecba182, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Ilya
+    sentences:
+    - So this is the reason im breathing here
+    - Interesting
+    - Heh ironic when everything goes wrong
+    - Plants will never care
 --- !u!1 &1813354944
 GameObject:
   m_ObjectHideFlags: 0
@@ -10316,6 +10633,7 @@ GameObject:
   - component: {fileID: 2044130411}
   - component: {fileID: 2044130410}
   - component: {fileID: 2044130409}
+  - component: {fileID: 2044130412}
   m_Layer: 5
   m_Name: ScreenInter
   m_TagString: Untagged
@@ -10386,7 +10704,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2044130410}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2044130412}
+        m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
+        m_MethodName: TriggerDialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2044130410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10425,6 +10755,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2044130407}
   m_CullTransparentMesh: 1
+--- !u!114 &2044130412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2044130407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3b95647fda38ca408676b899ecba182, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Ilya
+    sentences:
+    - Hmmm interesting nothing wrong on the ship
+    - And yet It says that there is no water here
+    - Better go check on that
 --- !u!1 &2044881038
 GameObject:
   m_ObjectHideFlags: 0
@@ -10777,6 +11125,7 @@ GameObject:
   - component: {fileID: 2066827037}
   - component: {fileID: 2066827036}
   - component: {fileID: 2066827035}
+  - component: {fileID: 2066827038}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -10847,7 +11196,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2066827036}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2066827038}
+        m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
+        m_MethodName: TriggerDialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2066827036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10886,6 +11247,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2066827033}
   m_CullTransparentMesh: 1
+--- !u!114 &2066827038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2066827033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3b95647fda38ca408676b899ecba182, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Ilya
+    sentences:
+    - Eugh Space
+    - Such and empty abyss
+    - Always wondered why I did this job
+    - Well i'm here not so doesn't matter
+    - Wait a second
+    - What is that?
+    - ...
+    - This is getting weirder and weirder
 --- !u!1001 &2068118841
 PrefabInstance:
   m_ObjectHideFlags: 0

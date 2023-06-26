@@ -44,6 +44,7 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
+        soundPlay.Play();
         string sentence = sentences.Dequeue();
         StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
