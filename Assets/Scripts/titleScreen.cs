@@ -9,6 +9,10 @@ public class titleScreen : MonoBehaviour
 
     public void SceneSwitch(int SceneId)
     {
-        SceneManager.LoadScene(SceneId);
+        SceneManager.LoadScene(1);
+    }
+    public void Quit()
+    {
+        Application.Quit();
     }
 }

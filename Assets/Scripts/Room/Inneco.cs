@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class Inneco : MonoBehaviour
 {
-    // Start is called before the first frame update
     public GameObject Dock;
     public GameObject Observe;
     public GameObject Hallway;
     public GameObject Hydroponics;
     public GameObject Innercore;
-
-    public AudioSource FootSteps;
+    
+    public GameObject SceneChange;
 
     public void DockActive()
     {

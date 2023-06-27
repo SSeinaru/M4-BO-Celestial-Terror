@@ -9,8 +9,8 @@ public class Halway : MonoBehaviour
     public GameObject airlock;
     public GameObject medbay;
 
-    public AudioSource FootSteps;
-    // Start is called before the first frame update
+    public GameObject SceneChange;
+
     public void returnInner()
     {
         hallway.SetActive(false);

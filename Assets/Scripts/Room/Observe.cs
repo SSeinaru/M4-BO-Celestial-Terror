@@ -7,7 +7,8 @@ public class Observe : MonoBehaviour
     public GameObject bserve;
     public GameObject inner;
 
-    public AudioSource FootSteps;
+    public GameObject SceneChange;
+
     // Start is called before the first frame update
     public void OnClick()
     {

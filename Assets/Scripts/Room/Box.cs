@@ -8,8 +8,8 @@ public class Box : MonoBehaviour
     public GameObject hydro;
     public GameObject boxOpen;
 
-
-    // Start is called before the first frame update
+    public GameObject SceneChange;
+    
     public  void HydroReturn()
     {
         box.SetActive(false);

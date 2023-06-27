@@ -7,7 +7,8 @@ public class Airlock : MonoBehaviour
     public GameObject airlockDis;
     public GameObject hallway;
 
-    public AudioSource FootSteps;
+    public GameObject SceneChange;
+
     // Start is called before the first frame update
 
     public void OnClick()

@@ -9,8 +9,7 @@ public class Hydro : MonoBehaviour
     public GameObject hydroPonics;
     public GameObject puzzle1;
 
-    public AudioSource FootSteps;
-    // Start is called before the first frame update
+    public GameObject SceneChange;
 
     public void onArrowPress()
     {

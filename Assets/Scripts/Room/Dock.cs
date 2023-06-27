@@ -5,10 +5,11 @@ using UnityEngine.UI;
 
 public class Dock : MonoBehaviour
 {
-    // Start is called before the first frame update
     public GameObject shuttle;
     public GameObject dock;
     public GameObject innercore;
+
+    public GameObject SceneChange;
 
     public void ArrowPressShuttle()
     {
