@@ -5,21 +5,26 @@ using UnityEngine;
 
 public class Hydro : MonoBehaviour
 {
-    public GameObject innerCore;
-    public GameObject hydroPonics;
-    public GameObject puzzle1;
 
+    private ChangeStates changeStates = ChangeStates.START;
     public GameObject SceneChange;
 
-    public void onArrowPress()
+    private RoomLogic roomLogic;
+
+    // Start is called before the first frame update
+    public void Start()
     {
-        hydroPonics.SetActive(false);
-        innerCore.SetActive(true);
+        roomLogic = GameObject.Find("ROoms").GetComponent<RoomLogic>();
+        //roomChangeManager = new RoomChangeManager(SceneChange);
     }
-    public void onEboxpress()
+    public void ReturnToInner()
     {
-        hydroPonics.SetActive(false) ;
-        puzzle1.SetActive(true) ;
+        roomLogic.MoveToRoom(SceneChange, Rooms.Hydroponics, Rooms.Innercore);
+
+    }
+    public void GoToBox()
+    {
+        roomLogic.MoveToRoom(SceneChange, Rooms.Hydroponics, Rooms.Box);
     }
 
 }

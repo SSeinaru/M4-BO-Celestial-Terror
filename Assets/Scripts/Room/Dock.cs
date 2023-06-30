@@ -5,21 +5,22 @@ using UnityEngine.UI;
 
 public class Dock : MonoBehaviour
 {
-    public GameObject shuttle;
-    public GameObject dock;
-    public GameObject innercore;
-
+    
     public GameObject SceneChange;
+    private RoomLogic roomLogic;
 
-    public void ArrowPressShuttle()
+    public void Start()
     {
-        dock.SetActive(false);
-        shuttle.SetActive(true);
+        roomLogic = GameObject.Find("ROoms").GetComponent<RoomLogic>();
+        //roomChangeManager = new RoomChangeManager(SceneChange);
     }
 
-    public void ArrowPressInner()
+    public void OnButtonPress()
     {
-        dock.SetActive(false);
-        innercore.SetActive(true);
+        roomLogic.MoveToRoom(SceneChange, Rooms.Docking, Rooms.Shuttle);
+    }
+    public void Innerbutton() 
+    {
+        roomLogic.MoveToRoom(SceneChange, Rooms.Docking, Rooms.Innercore);
     }
 }

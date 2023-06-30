@@ -4,26 +4,25 @@ using UnityEngine;
 
 public class Halway : MonoBehaviour
 {
-    public GameObject hallway;
-    public GameObject innercore;
-    public GameObject airlock;
-    public GameObject medbay;
-
     public GameObject SceneChange;
+    private RoomLogic roomLogic;
 
-    public void returnInner()
+    public void Start()
     {
-        hallway.SetActive(false);
-        innercore.SetActive(true);
+        roomLogic = GameObject.Find("ROoms").GetComponent<RoomLogic>();
+        //roomChangeManager = new RoomChangeManager(SceneChange);
     }
-    public void GoAirlock()
+
+    public void ToAirlock()
     {
-        hallway.SetActive(false);
-        airlock.SetActive(true);
+        roomLogic.MoveToRoom(SceneChange, Rooms.Hallway, Rooms.Airlock);
     }
-    public void GoMedbay()
+    public void ToMedbay()
     {
-        hallway.SetActive(false);
-        medbay.SetActive(true);
+        roomLogic.MoveToRoom(SceneChange, Rooms.Hallway, Rooms.Medbay);
+    }
+    public void ToInnercore()
+    {
+        roomLogic.MoveToRoom(SceneChange, Rooms.Hallway, Rooms.Innercore);
     }
 }

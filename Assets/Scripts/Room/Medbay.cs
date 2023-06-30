@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class Medbay : MonoBehaviour
 {
-    public GameObject hallway;
-    public GameObject medbay;
+
 
     public GameObject SceneChange;
+    private RoomLogic roomLogic;
 
     // Start is called before the first frame update
-    public void BackHallway()
+    public void Start()
     {
-        medbay.SetActive(false);
-        hallway.SetActive(true);
+        roomLogic = GameObject.Find("ROoms").GetComponent<RoomLogic>();
+        //roomChangeManager = new RoomChangeManager(SceneChange);
+    }
+    public void ReturnToHallway()
+    {
+        roomLogic.MoveToRoom(SceneChange, Rooms.Medbay, Rooms.Hallway);
+
     }
 }

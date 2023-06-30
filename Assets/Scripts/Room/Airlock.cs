@@ -4,16 +4,19 @@ using UnityEngine;
 
 public class Airlock : MonoBehaviour
 {
-    public GameObject airlockDis;
-    public GameObject hallway;
-
     public GameObject SceneChange;
+    private RoomLogic roomLogic;
 
     // Start is called before the first frame update
-
-    public void OnClick()
+    public void Start()
     {
-        airlockDis.SetActive(false);
-        hallway.SetActive(true);
+        roomLogic = GameObject.Find("ROoms").GetComponent<RoomLogic>();
+        //roomChangeManager = new RoomChangeManager(SceneChange);
+    }
+    public void ReturnToHallway()
+    {
+        roomLogic.MoveToRoom(SceneChange, Rooms.Airlock, Rooms.Hallway);
+
     }
 }
+

@@ -4,33 +4,28 @@ using UnityEngine;
 
 public class Inneco : MonoBehaviour
 {
-    public GameObject Dock;
-    public GameObject Observe;
-    public GameObject Hallway;
-    public GameObject Hydroponics;
-    public GameObject Innercore;
-    
     public GameObject SceneChange;
+    private RoomLogic roomLogic;
 
-    public void DockActive()
+    public void Start()
     {
-        Innercore.SetActive(false);
-        Dock.SetActive(true);
+        roomLogic = GameObject.Find("ROoms").GetComponent<RoomLogic>();
+        //roomChangeManager = new RoomChangeManager(SceneChange);
     }
-    public void ObserveActive()
+    public void ToDocking()
     {
-        Innercore.SetActive(false);
-        Observe.SetActive(true);
+        roomLogic.MoveToRoom(SceneChange, Rooms.Innercore, Rooms.Docking);
     }
-
-    public void MedbayActive()
+    public void ToObserve()
     {
-        Innercore.SetActive(false);
-        Hallway.SetActive(true);
+        roomLogic.MoveToRoom(SceneChange, Rooms.Innercore, Rooms.Observe);
     }
-    public void HydroponicsActive()
+    public void ToHallway()
     {
-        Innercore.SetActive(false);
-        Hydroponics.SetActive(true);
+        roomLogic.MoveToRoom(SceneChange, Rooms.Innercore, Rooms.Hallway);
+    }
+    public void ToHydroponics()
+    {
+        roomLogic.MoveToRoom(SceneChange, Rooms.Innercore, Rooms.Hydroponics);
     }
 }
