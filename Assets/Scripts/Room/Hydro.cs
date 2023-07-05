@@ -6,7 +6,6 @@ using UnityEngine;
 public class Hydro : MonoBehaviour
 {
 
-    private ChangeStates changeStates = ChangeStates.START;
     public GameObject SceneChange;
 
     private RoomLogic roomLogic;

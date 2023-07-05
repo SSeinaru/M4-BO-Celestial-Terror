@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PipeManager : MonoBehaviour
 {
@@ -62,6 +63,7 @@ public class PipeManager : MonoBehaviour
         if (check)
         {
             Timer.SetActive(false);
+            SceneManager.LoadScene(3);
         }
     }
 }
